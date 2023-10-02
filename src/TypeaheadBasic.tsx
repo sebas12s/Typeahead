@@ -23,7 +23,6 @@ export const TypeaheadBasic = () => {
     <>
       <Typeahead
         onInputChange={onInputChangeValue}
-        maxResults={5}
         id="typeahead-basic"
         minLength={1}
         options={[...optionZipCode, ...optionsCityState]}
