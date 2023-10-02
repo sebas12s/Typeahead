@@ -4,6 +4,6 @@ import { TypeaheadBasic } from "./TypeaheadBasic";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <TypeaheadBasic  />
+    <TypeaheadBasic />
   </React.StrictMode>
 );

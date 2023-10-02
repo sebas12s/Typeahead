@@ -5,10 +5,12 @@ import { useState } from "react";
 
 export const TypeaheadBasic = () => {
   const [optionsCityState, setOptionsCityState] = useState([]);
+  const [optionZipCode, setOptionZipCode] = useState([]);
 
   const fetchData = async (value: string) => {
-    const { cityState } = await Get(value);
+    const { cityState, zipCode } = await Get(value);
     setOptionsCityState(cityState);
+    setOptionZipCode(zipCode);
   };
 
   const onInputChangeValue = (input: string) => {
@@ -24,7 +26,7 @@ export const TypeaheadBasic = () => {
         maxResults={5}
         id="typeahead-basic"
         minLength={1}
-        options={optionsCityState}
+        options={[...optionZipCode, ...optionsCityState]}
         className="m-4 w-25"
         paginate={false}
       />
