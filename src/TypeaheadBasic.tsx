@@ -1,6 +1,6 @@
 import { Typeahead } from 'react-bootstrap-typeahead';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
-import { getData } from './api/get';
+import { getData } from './api/getData';
 import { useState } from 'react';
 
 export const TypeaheadBasic = () => {
